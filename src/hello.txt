@@ -1,0 +1,7 @@
+<Route exact path="/" ><News pageSize={12} country="us" category="business" /></Route>
+<Route exact path="/" ><News pageSize={12} country="us" category="entertainment" /></Route>
+<Route exact path="/" ><News pageSize={12} country="us" category="general" /></Route>
+<Route exact path="/" ><News pageSize={12} country="us" category="health" /></Route>
+<Route exact path="/" ><News pageSize={12} country="us" category="science" /></Route>
+<Route exact path="/" ><News pageSize={12} country="us" category="sports" /></Route>
+<Route exact path="/" ><News pageSize={12} country="us" category="technology" /></Route>
