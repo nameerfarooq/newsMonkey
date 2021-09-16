@@ -1,21 +1,23 @@
-import React, { Component } from 'react'
+import React from 'react'
 import './newsitem.css'
 import Notfound from './notfound'
-export class NewsItems extends Component {
-    render() {
-let {title, description, ImageUrl, newsUrl, publishedAt, author,source} = this.props
+
+const NewsItems = (props)=> {
+   let {title, description, ImageUrl, newsUrl, publishedAt, author,source} = props
         return (
             <div>
-                       <div className="card m-3" style={{width: "20rem"}}>
-                       <span class="position-absolute top-0  translate-middle badge rounded-pill bg-danger" style={{left:"80%",zIndex:"1"}}>
-                           {source.name}
-    
-                            </span>
-          
-                    
-                    
+                       <div className="card m-3">
+                       <div style={{
+                        display: 'flex',
+                        justifyContent: 'flex-end',
+                        position: 'absolute',
+                        right: '0',
+                        marginTop : "-10px"
+                    }
+                    }>
+                        <span className="badge rounded-pill bg-danger" > {source.name} </span>
+                    </div>
                     {ImageUrl?  <img src={ImageUrl } className="card-img-top imgCard" alt="..."/>:<Notfound/>}  
-
                     <div className="card-body">
                         <h5 className="card-title">{title}...</h5>
                         <p className="card-text">{description}...</p>
@@ -24,10 +26,6 @@ let {title, description, ImageUrl, newsUrl, publishedAt, author,source} = this.p
                     </div>
                 </div>
             </div>
-        )
-    }
+        )    
 }
-
-
-
 export default NewsItems
